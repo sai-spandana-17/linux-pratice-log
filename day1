@@ -1,0 +1,99 @@
+day 1:
+    level 0 -> level 1
+    
+        * This challenge is about finding a password   which is stored in "readme" file .
+        given info:
+                        1.username :bandit0
+                        2.port:2220
+                        3.host:bandit.labs.overthewire.org
+                        4.password:bandit0
+        ->  commands i used:
+            . ls
+            . cat
+            . ssh
+            
+             process : 
+                  First i used ls command to list the files/items in th directory.
+                  Then i used "cat" command to read the info in the readme file which i found by ls command .
+                  i got the password for next level (level1 ->level2)
+                  
+                  
+     level1 -> level2
+            
+             * The password for the next level is stored in a file called - located in the home directory
+             
+             given info:
+                    1.password from above level
+                    2.file name : -
+                    
+           commands used:
+                   1.ls
+                   2.cat
+           process :
+                 the terminal is already in home directory so i just listed teh by file names by  "ls" command .
+                 Then i used "cat ./-" to get password in - file .
+                 
+           why i used this "./"
+                         if  i used "cat -" command : it replecated or copy what i have written in terminal .
+                         here . represents the currrent folder/directory
+                         and  ./ say the file is .. 
+                         like   : ./filename               
+    level2  -> level3
+             
+                *  The password for the next level is stored in a file called --spaces in this filename-- located in the home directory 
+                 
+                 given info :
+                       1. filename: --space in the filename--
+                       2.password from above level
+                commands used
+                        1.ls
+                        2.cat
+                 process:
+                      as usal ls to list file names 
+                      here the file name has spaces which terminal  take spaces different it doesn't take it has filename.
+                      for that we use : "cat  ./"--space in the filename--"
+                      
+                      we know the ./ imply filename and we witr filename in quotes to tell its complete file name .
+                      
+                      we got password !!!!
+                 
+                 
+    level3 -> level4
+     
+               * The password for the next level is stored in a hidden file in the inhere directory.
+                      
+                      given info :
+                               1. its a hidden file in inhere directory
+                                2.password from above level
+                      commands used:
+                                1.ls , ls -a
+                                2.cd
+                                3.cat
+                      process:
+                           First i changed th directory to inhere with cd command "cd inhere"
+                           Then listed hidden files by "ls -a"
+                           next priented teh password using cat : "cat ./.filename"
+                           we got password !!!
+    
+    level4-> level5
+             
+               * The password for the next level is stored in the only human-readable file in the inhere directory. Tip: if your terminal is messed up, try the “reset” command
+                         
+                       given info :
+                              1.humna readable file in inhere directory.
+                              2.password by above level.
+                      commands used:
+                            1.cd
+                            2.file -- *
+                            3.cat
+                      process  ;
+                           changed the directory to inhere
+                           next i cat all the files present in it and i got password .
+                           but the right way to do is to check the file type there are binary,data,oublic key,ASCII text 
+                           therefore to check teh  type of file we use "file -- *" command
+                           as per the type of data we cat the file .
+                           human readable file= ASCII text  
+                           
+                           
+                           
+                        
