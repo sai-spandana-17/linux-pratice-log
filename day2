@@ -1,0 +1,29 @@
+level 5 -> level6
+
+
+ *The password for the next level is stored in a file somewhere under the inhere directory and has all of the following properties:
+
+    human-readable
+    1033 bytes in size
+    not executable
+
+    command used:
+        1.cd
+        2.ls
+        3.find(find . -type f -size 1033c ! -excutable)
+    process
+        changded from home to inhere directory by cd
+        listed the directories by ls
+        then used "find . -type f -size 1033c ! executable "
+        we got the address of password then printedd teh .file by cat ./.filename .
+        
+          then we got password!!! for next level.
+          
+      --> find is the command used to search files /directories.
+             find . -> start searchinf frm current directory
+             type -f   ->  onlt shows files
+             -size 1033c(c=bytes) (k=kilobytes)(m=megabytes)(g=gigabytes)-> this filters the file by size
+            ! -executable -> ! reprents not       
+            
+               
+        
