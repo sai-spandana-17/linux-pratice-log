@@ -1,0 +1,70 @@
+level6 -> level7
+
+  *The password for the next level is stored somewhere on the server and has all of the following properties:
+
+    owned by user bandit7
+    owned by group bandit6
+    33 bytes in size
+    
+    commands used;
+          1.find
+          2.cd
+          3.ls
+          
+     process :
+               
+              As per given info i used the command 
+                 : ' find / -user bandit7 -group bandit6 -size 33c"
+                 gave me lot of info but at a point it shoed me the path to a file 
+                 then i printed that file with the help of given path and
+                 found password!!
+                 
+                 
+                 here / in find says that search from root directory.
+                 
+                 
+                 
+ level7 -> level8
+ 
+     *The password for the next level is stored in the file data.txt next to the word millionth
+     
+     commands used:
+            1.ls
+            2.grep
+            
+      process:
+            first i listed the files/directories present in it 
+            then as per given info data.txt contains the password text to the word millionth
+            i used teh command grep ."grep 'millionth' data.txt".
+            and we found the password !!!
+            
+ 
+    level8 -> level9
+       
+         *The password for the next level is stored in the file data.txt and is the only line of text that occurs only once
+           
+               commmands used ;
+                      1.sort
+                      2.uniq
+                      
+             process;
+                      There are too many password to find the correect on ein file 
+                      which occured only once . 
+                      I used "sort data.txt | uniq -u '
+                      we got password!!!
+                      
+                      sort : sorts the lines 
+                      uniq -u : prints the unique one deletes the  duplicate onces(adjecent)
+                      
+                      we would only used the uniq to find the "only once occured" but 
+                      uniq only deletes the duplicates which i adjecent to it so if we sorted that first then use uniq 
+                      we get answer.
+                      
+
+                       
+                
+                  
+           
+                 
+                 
+                 

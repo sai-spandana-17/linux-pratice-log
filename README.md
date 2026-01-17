@@ -23,4 +23,12 @@ comands used :
              ex ; ssh username@ipaddress
                     ssh username@dns -p portnumber                   
             
-       
+ 6. find ;  used to find/search files/directories
+ 
+ 7. sort : used to sort data in file.
+                 ex:  sort filename.txt
+ 
+ 8. uniq ; prints the only line which is unique
+                  ex: uniq filename.txt
+ 9. grep : searches the words/lines/charectors present in file
+                ex: grep "what you want to search" filename.txt
