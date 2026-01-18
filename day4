@@ -1,0 +1,45 @@
+ level9 -> level10
+ 
+ *The password for the next level is stored in the file data.txt in one of the few human-readable strings, preceded by several ‘=’ characters.
+ 
+      commands used :
+         1.ls
+         2.string
+         3.grep
+         
+         process:
+          lsisted the files first
+          used ' strings data.txt | grep "=" '
+             we got password.
+             
+             Strings is used to read the human readable text present in file .
+             
+             
+ level10 -> level 11
+ 
+     *The password for the next level is stored in the file data.txt, which contains base64 encoded data
+     
+            caommand used:
+                1.base64
+                
+            process :
+                i used "base64 -d data.txt"
+                   to decode the encoded data.
+                   
+ level11 -> level12
+ 
+     *The password for the next level is stored in the file data.txt, where all lowercase (a-z) and uppercase (A-Z) letters have been rotated by 13 positions
+     
+            commands used :
+                     1.ls
+                     2.cat
+                     3.tr
+                     
+                process :
+                          i used "cat data.txt | tr 'A-Za-z' 'N-ZA-Mn-za-m' 
+                          we got passwprs 
+                          rotation 13 mean teh alphabetical order stats from the 13th alphabet 
+                          
+ level12 -. level13
+         
+         *The password for the next level is stored in the file data.txt, which is a hexdump of a file that has been repeatedly compressed. For this level it may be useful to create a directory under /tmp in which you can work. Use mkdir with a hard to guess directory name. Or better, use the command “mktemp -d”. Then copy the datafile using cp, and rename it using mv (read the manpages!
