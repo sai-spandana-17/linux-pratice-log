@@ -1,0 +1,46 @@
+level12 ->level13
+
+*The password fo r the next level is stored in the file data.txt, which is a hexdump of a file that has been repeatedly compressed. For this level it may be useful to create a directory under /tmp in which you can work. Use mkdir with a hard to guess directory name. Or better, use the command “mktemp -d”. Then copy the datafile using cp, and rename it using mv (read the manpages!)
+  
+              commands used :
+                           1.ls
+                           2.mktemp -d
+                           3.cd
+                           4.mv
+                           5.gunzip
+                           6.bunzip2
+                           7.tar
+
+          process >> 
+                          mktemp -d :to make random folder
+                                  it looks like : tmp/tmp.cvss44w32
+                         then change the directory where the random file is created:
+                                 tmp/tmp.cvss44w32
+                         now copying the original data from data.txt to rodomly created file "tmp/tmp.cvss44w32'
+                                   cp  ~/data.txt .
+                                          here ~ represents home directory where data.txt is present
+                                          and . at end represents current directory
+                         present the file is in hex form to convert it into normal file:
+                                  xxd -r data.txt  > file1
+                          now  see the file type by : "file filename"
+                          if its gzip : 
+                                 use mv filename.xx  filename.gz
+                                 then , gunzip filename.gz
+                          if its is bzip :
+                              use  mv filename.xx  filename.bz2
+                              then bunzip2 filename.bz2
+                        if its tar:
+                                 use tar -xf  filename
+                                 
+                        check teh file and use above commands to unzip the file repeatedly ,
+                        untill the file type is   "ASCII text "
+                        
+                         at last after so many repeated steps we got passworddd...!!!!!
+                         
+                         
+                        
+    
+     
+      
+                                          
+                          
