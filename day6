@@ -1,0 +1,32 @@
+ level13 -> level14
+    
+    *The password for the next level is stored in /etc/bandit_pass/bandit14 and can only be read by user bandit14. For this level, you don’t get the next password, but you get a private SSH key that can be used to log into the next level. Look at the commands that logged you into previous bandit levels, and find out how to use the key for this level.
+    
+    commands used:
+                1.ls
+                2.cd
+                3.ssh
+        process:
+               using ssh
+                with private key they given 
+                "ssh -i sshkey.private bandit14@localhost"
+                then cat /etc/bandit_pass/bandit14
+                we got password.
+                
+                
+                
+                
+level14 -> level15
+    * The password for the next level can be retrieved by submitting the password of the current level to port 30000 on localhost
+    
+       commands used :
+             1.nc
+             
+             
+             process>> 
+              1. nc localhost 30000
+                 and then submmit the password of bandit14
+                  we got the password.
+               
+            
+                
