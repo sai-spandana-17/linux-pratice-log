@@ -9,9 +9,11 @@
         process:
                using ssh
                 with private key they given 
-                "ssh -i sshkey.private bandit14@localhost"
-                then cat /etc/bandit_pass/bandit14
-                we got password.
+                i copieed the key into my system and gave presmission to read and write to owner
+                then
+                "ssh -i sshkey.private -p 2220 bandit14@bandit.labs.overthewire.org"
+                
+           
                 
                 
                 
