@@ -14,6 +14,10 @@
                 "ssh -i sshkey.private -p 2220 bandit14@bandit.labs.overthewire.org"
                 
            
+
+                "ssh -i sshkey.private bandit14@localhost"
+                then cat /etc/bandit_pass/bandit14
+                we got password.
                 
                 
                 
@@ -29,6 +33,8 @@ level14 -> level15
               1. password if bandit14 is stored in /etc/bandit_pass/bandit14
                  then
                  echo "password of bandit14"|nc localhost 3000
+              2. nc localhost 30000
+                 and then submmit the password of bandit14
                   we got the password.
                
             

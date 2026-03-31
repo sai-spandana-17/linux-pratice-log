@@ -1,0 +1,65 @@
+level 15->16
+
+*The password for the next level can be retrieved by submitting the password of the current level to port 30001 on localhost using SSL/TLS encryption.
+
+Helpful note: Getting “DONE”, “RENEGOTIATING” or “KEYUPDATE”? Read the “CONNECTED COMMANDS” section in the manpage.
+
+commands used:
+ 1.openssl s_client
+ 
+proess>>
+   "openssl s_client -connect localhost:30001"
+   then enter the password of level15
+   we got password
+   
+ 
+ 
+level 16->17
+
+*The credentials for the next level can be retrieved by submitting the password of the current level to a port on localhost in the range 31000 to 32000. First find out which of these ports have a server listening on them. Then find out which of those speak SSL/TLS and which don’t. There is only 1 server that will give the next credentials, the others will simply send back to you whatever you send to it. 
+ 
+commands used:
+
+1.nmap
+2.openssl s_client
+
+process>>
+ 
+ I scaned the port of range 31000-32000 by nmap "nmap -p 31000-3200 localhost"
+ that gave me few ports which are open (tcp)
+ I cheked them with "openssl s_client -connect locahost;<port>"
+ for correct port I enter the password of level 16 that gave me sshkey of next level .
+ 
+ 
+ 
+level 17->18
+
+* There are 2 files in the homedirectory: passwords.old and passwords.new. The password for the next level is in passwords.new and is the only line that has been changed between passwords.old and passwords.new
+
+commands used:
+
+1.diff
+
+process>>
+
+to check the different lines in 2 files
+ "diff password.old passwor.new"
+ 
+ I got password
+ 
+ 
+ level 18->19
+ 
+*The password for the next level is stored in a file readme in the homedirectory. Unfortunately, someone has modified .bashrc to log you out when you log in with SSH.
+
+command used:
+
+1.ssh
+
+process>>
+
+I used 'ssh -p 2220 bandit18@bandit.labs.overthewire.org "cat readme" '
+and enter the password 
+we got next level password !!!!
+
+
