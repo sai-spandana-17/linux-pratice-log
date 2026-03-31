@@ -26,8 +26,9 @@ level14 -> level15
              
              
              process>> 
-              1. nc localhost 30000
-                 and then submmit the password of bandit14
+              1. password if bandit14 is stored in /etc/bandit_pass/bandit14
+                 then
+                 echo "password of bandit14"|nc localhost 3000
                   we got the password.
                
             
